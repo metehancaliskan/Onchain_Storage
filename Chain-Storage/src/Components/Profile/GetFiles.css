@@ -1,0 +1,70 @@
+.get-file-body {
+    background-color: #000;
+    color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.loading-file-item {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background: rgb(139,60,193);
+   background: linear-gradient(90deg, rgba(139,60,193,1) 0%, rgba(88,50,255,1) 93%);	
+   border: none !important;
+}
+
+button {
+    background: rgb(139,60,193);
+    background: linear-gradient(90deg, rgba(139,60,193,1) 0%, rgba(88,50,255,1) 93%);	
+    border: none !important;
+}
+
+.get-files-container-two {
+    color: #fff  !important;    
+    background: rgb(139,60,193);
+    background: linear-gradient(90deg, rgba(139,60,193,1) 0%, rgba(21,12,60,1) 0%);
+    height: 100%;
+}
+
+.navbar-color {
+    color: #fff !important;
+    text-decoration: none;
+    
+}
+
+.get-files-container {
+    color: #fff  !important;	
+    background: rgb(139,60,193);
+    background: linear-gradient(90deg, rgba(139,60,193,1) 0%, rgba(21,12,60,1) 0%);
+    height: 100%;
+    min-height: 100vh;
+    padding-top: 1rem;
+}
+
+.get-files-card {
+    color: #fff  !important;	
+    background: rgb(139,60,193);
+    background: linear-gradient(90deg, rgba(139,60,193,1) 0%, rgba(88,50,255,1) 93%);	
+}
+
+.color {
+    color: #fff !important;
+}
+
+.link {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.table-collum {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.link-button {
+   height: 3rem; 
+   width: 8rem;
+}
