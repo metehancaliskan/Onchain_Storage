@@ -2,6 +2,7 @@ import React from "react";
 import BuyGb from "../artifacts/contracts/BuyGb.sol/BuyGb.json";
 import { Spinner } from "react-bootstrap";
 import { ethers } from "ethers";
+import { NavbarLogin } from "./components/navbar/Navbar.login";
 
 declare let window: any;
 
@@ -44,19 +45,19 @@ export class BuyStorageClass extends reactComponent<{}, State> {
       try {
         let noting;
         const data = await contract.currentRole();
-        console.log(data)
+        console.log(data);
         let dataArray: any[] = [];
 
         for (let index = 0; index < data.length; index++) {
           const element = data[index];
-          const elementYear = Number(element.year) 
-          const elementMount = Number(element.month) 
-          const elementDay = Number(element.day) 
+          const elementYear = Number(element.year);
+          const elementMount = Number(element.month);
+          const elementDay = Number(element.day);
           console.log(elementYear, elementMount, elementDay);
 
           if (
             element.userAddress.toLowerCase() ===
-            window.ethereum.selectedAddress 
+            window.ethereum.selectedAddress
           ) {
             console.log("File Added");
             dataArray.push(element);
@@ -66,7 +67,7 @@ export class BuyStorageClass extends reactComponent<{}, State> {
         this.setState({ CurrenRole: dataArray });
         const userRole = this.state.CurrenRole;
         console.log(this.state.CurrenRole);
-        this.setState({ loading: true })
+        this.setState({ loading: true });
       } catch (error: unknown) {
         console.error(error);
       }
@@ -91,20 +92,19 @@ export class BuyStorageClass extends reactComponent<{}, State> {
           year: year,
         });
 
-        const options = {value: ethers.utils.parseEther(price)}
+        const options = { value: ethers.utils.parseEther(price) };
 
-        const data = await ContractValue(
-          day,
-          month,
-          year,
-          options
-        );
+        const data = await ContractValue(day, month, year, options);
 
         console.log(data);
 
-
-        const provider = new ethers.providers.JsonRpcProvider("https://rpc-mumbai.maticvigil.com/");
-        const signer = new ethers.Wallet("b5b2fdb43e55b54987e77087a7ad369c04faca76ffca3c7542aa93068bbf3bca", provider);
+        const provider = new ethers.providers.JsonRpcProvider(
+          "https://rpc-mumbai.maticvigil.com/"
+        );
+        const signer = new ethers.Wallet(
+          "b5b2fdb43e55b54987e77087a7ad369c04faca76ffca3c7542aa93068bbf3bca",
+          provider
+        );
 
         const contract = new ethers.Contract(
           "0x68056f2B4272feeC2EBc2e8C693d574751F066D9",
@@ -113,7 +113,7 @@ export class BuyStorageClass extends reactComponent<{}, State> {
         );
 
         const SendMonyData = await contract.SendMony(
-          "0xd059070414F079C51FAd87470B62e394613Cff7b",
+          "0xd059070414F079C51FAd87470B62e394613Cff7b"
         );
 
         console.log(SendMonyData);
@@ -139,7 +139,7 @@ export class BuyStorageClass extends reactComponent<{}, State> {
       const contract = new ethers.Contract(
         "0x68056f2B4272feeC2EBc2e8C693d574751F066D9",
         BuyGb.abi,
-        signer 
+        signer
       );
       this.buyRole(contract.buyGold, "gold", "0.003");
     }
@@ -153,7 +153,7 @@ export class BuyStorageClass extends reactComponent<{}, State> {
       const contract = new ethers.Contract(
         "0x68056f2B4272feeC2EBc2e8C693d574751F066D9",
         BuyGb.abi,
-        signer 
+        signer
       );
       this.buyRole(contract.buyPreminum, "preminum", "0.005");
     }
@@ -162,6 +162,7 @@ export class BuyStorageClass extends reactComponent<{}, State> {
   render() {
     return (
       <>
+        <NavbarLogin />
         <h1>Buy Storage</h1>
         <div className="container">
           <div className="row col-md-6">
@@ -177,18 +178,23 @@ export class BuyStorageClass extends reactComponent<{}, State> {
             </div>
           </div>
         </div>
-        {this.state.loading ? (this.main) : (
-          <div style={{  
-                width: "50px",
-                height: "50px",
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                margin: "-25px 0 0 -25px", }} >
-              <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </Spinner>
-        </div>
+        {this.state.loading ? (
+          this.main
+        ) : (
+          <div
+            style={{
+              width: "50px",
+              height: "50px",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              margin: "-25px 0 0 -25px",
+            }}
+          >
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          </div>
         )}
       </>
     );

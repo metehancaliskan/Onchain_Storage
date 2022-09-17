@@ -8,14 +8,15 @@ import {
   WhatChainStorage,
   Features,
 } from "./containers";
-import { CTA, Brand, Navbar } from "./components";
-
+import { CTA, Brand } from "./components";
+import { Navbar } from "./components/navbar/NavbarMain";
 import "./App.css";
 
 export const HomePage = () => {
   return (
     <div className="App">
       <div className="gradient__bg">
+        <Navbar />
         <Header />
       </div>
       <Brand />
