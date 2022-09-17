@@ -2,6 +2,7 @@ import React from "react";
 import "../Profile/GetFiles.css";
 import axios from "axios";
 import Cookies from "js-cookie";
+import { NavbarLogin } from "../../Container/components/navbar/Navbar.login";
 
 // import { Link } from "react-router-dom";
 
@@ -60,6 +61,7 @@ export class importAccount extends React.Component<{}, State> {
     return (
       <>
         <div>
+          <NavbarLogin />
           <form onSubmit={this.onSubmit}>
             <label>Token</label>
             <input
