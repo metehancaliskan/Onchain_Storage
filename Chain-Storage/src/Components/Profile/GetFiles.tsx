@@ -152,7 +152,8 @@ export class GetFiles extends React.Component<{}, State> {
           }
 
           dataArray.reverse();
-          const tokenCookie = Cookies.get("token");
+          const tokenCookie: any = Cookies.get("token");
+          this.setState({ token: tokenCookie });
           console.log(tokenCookie);
           const cookieObject = {
             token: tokenCookie,
