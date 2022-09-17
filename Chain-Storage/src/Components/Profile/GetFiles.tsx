@@ -25,18 +25,13 @@ import fileDownload from "js-file-download";
 declare let window: any;
 
 interface State {
-  _FileName: string;
-  _FileLink: string;
-  _FileSize: string | number;
   UserFiles: any[];
   LastUploads: any[];
   CurrenRole: any[] | any;
   myFile: any;
   totalStorage: any;
   totalFileSize: any;
-  loadingFiles: any[];
   loading: any;
-  loadingFile: string;
 }
 
 interface Component<P = {}, S = {}> extends ComponentLifecycle<P, S> {}
@@ -56,18 +51,13 @@ export class GetFiles extends React.Component<{}, State> {
     this.downloadFiles = this.downloadFiles.bind(this);
 
     this.state = {
-      _FileName: "",
-      _FileLink: "",
-      _FileSize: "",
       UserFiles: [],
       LastUploads: [],
       CurrenRole: [],
       myFile: null,
       totalStorage: "",
       totalFileSize: "",
-      loadingFiles: [],
       loading: false,
-      loadingFile: "",
     };
   }
 
@@ -182,6 +172,7 @@ export class GetFiles extends React.Component<{}, State> {
   }
 
   async componentDidMount() {
+    console.log(window.ethereum._state.accounts.length);
     this.main();
   }
 
