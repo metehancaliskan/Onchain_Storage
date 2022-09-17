@@ -124,11 +124,7 @@ export class GetFiles extends React.Component<{}, State> {
             };
 
             let fileImage;
-            if (
-              setFileFormats(
-                "png" || "svg" || "jpeg" || "jpg" || "tiff" || "tif"
-              ) === true
-            ) {
+            if (setFileFormats("png") === true) {
               fileImage = <MdOutlineImage />;
             } else if (setFileFormats("pdf") === true) {
               fileImage = <MdPictureAsPdf />;
