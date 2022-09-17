@@ -20,6 +20,8 @@ import {
 import "../Profile/GetFiles.css";
 import axios from "axios";
 import fileDownload from "js-file-download";
+import Cookies from "js-cookie";
+
 // import { Link } from "react-router-dom";
 
 declare let window: any;
@@ -32,6 +34,7 @@ interface State {
   totalStorage: any;
   totalFileSize: any;
   loading: any;
+  token: string;
 }
 
 interface Component<P = {}, S = {}> extends ComponentLifecycle<P, S> {}
@@ -58,6 +61,7 @@ export class GetFiles extends React.Component<{}, State> {
       totalStorage: "",
       totalFileSize: "",
       loading: false,
+      token: "",
     };
   }
 
@@ -109,6 +113,7 @@ export class GetFiles extends React.Component<{}, State> {
         const userData = {
           publicKey: window.ethereum.selectedAddress,
         };
+        console.log(window.ethereum.selectedAddress);
 
         axios.post("http://localhost:4000/getFiles/", userData).then((data) => {
           console.log(data.data.data);
@@ -147,6 +152,12 @@ export class GetFiles extends React.Component<{}, State> {
           }
 
           dataArray.reverse();
+          const tokenCookie = Cookies.get("token");
+          console.log(tokenCookie);
+          const cookieObject = {
+            token: tokenCookie,
+          };
+
           this.setState({ UserFiles: dataArray });
 
           const lastFourUploads = this.state.UserFiles.slice(0, 4);
@@ -168,7 +179,6 @@ export class GetFiles extends React.Component<{}, State> {
   }
 
   async componentDidMount() {
-    console.log(window.ethereum._state.accounts.length);
     this.main();
   }
 
@@ -234,6 +244,7 @@ export class GetFiles extends React.Component<{}, State> {
     return (
       <>
         <div className="get-files-container">
+          <p>User Password: {this.state.token} </p>
           <div className="row w-100" style={{ margin: "0 auto" }}>
             <div className="col-md-3">
               <h5>

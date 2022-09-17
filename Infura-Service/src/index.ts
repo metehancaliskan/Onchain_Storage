@@ -11,6 +11,7 @@ import { create } from "ipfs-http-client";
 import crypto, { createHmac } from "node:crypto";
 import SendFile from "./artifacts/contracts/SendFile.sol/SendFile.json";
 import { Contract, providers } from "ethers";
+import jwt from "jsonwebtoken";
 
 const app = express();
 const port = 4000;
@@ -140,7 +141,6 @@ app.post("/getFiles/", async (req: Request, res: Response) => {
   for (let index = 0; index < data.length; index++) {
     const element = data[index];
     const publicKey = req.body.publicKey;
-    console.log(element[0], publicKey);
 
     if (element[0].toLowerCase() === publicKey) {
       const decipher = crypto.createDecipher(
@@ -170,6 +170,51 @@ app.post("/getFiles/", async (req: Request, res: Response) => {
     status: "success",
     data: myArray,
   });
+});
+
+app.post("/login/", async (req: Request, res: Response) => {
+  try {
+    const token: string = jwt.sign(
+      { userPulicKey: req.body.userPulicKey },
+      `${process.env.TOKEN_KEY}`
+    );
+    console.log(token);
+
+    function setCookie(name: string, val: string) {
+      const date = new Date();
+      const value = val;
+
+      // Set it expire in 7 days
+      date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
+    }
+
+    setCookie("token", token);
+
+    res.status(201).json({
+      status: "success",
+      data: token,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.post("/importAccount/", async (req: Request, res: Response) => {
+  try {
+    const decoded = jwt.verify(req.body.token, `${process.env.TOKEN_KEY}`);
+    console.log(decoded);
+
+    if (typeof req.body.token === "undefined") {
+      req.body.token = "";
+    }
+
+    res.status(201).json({
+      status: "success",
+      data: decoded,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.listen(port, () => {

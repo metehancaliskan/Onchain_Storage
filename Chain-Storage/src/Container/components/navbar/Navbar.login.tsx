@@ -6,15 +6,6 @@ import { Link } from "react-router-dom";
 
 declare let window: any;
 
-async function requestAccount() {
-  console.log(window.ethereum.selectedAddress);
-  const connect: any = await window.ethereum.request({
-    method: "eth_requestAccounts",
-  });
-
-  window.location.href = "/profile";
-}
-
 const Menu = () => (
   <>
     <p>
@@ -22,6 +13,9 @@ const Menu = () => (
     </p>
     <p>
       <Link to="/profile">Profile</Link>
+    </p>
+    <p>
+      <Link to="/importAccount/">Import Account</Link>
     </p>
     <p>
       <Link to="/profile/buyStorage">Buy Storage</Link>
