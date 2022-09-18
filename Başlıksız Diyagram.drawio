@@ -1,1 +1,63 @@
-<mxfile host="app.diagrams.net" modified="2022-09-18T07:52:54.387Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" version="20.3.2" etag="jQSor4pBcuXBL2_NJ5Dn" type="github"><diagram id="2Tg6jU1f62n6YvoEOPS1">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-09-18T08:07:08.047Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="DJuX11TrmQXiwhlOshEz" version="20.3.2" type="github">
+  <diagram id="2Tg6jU1f62n6YvoEOPS1" name="Sayfa -1">
+    <mxGraphModel dx="1350" dy="805" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OhmPqcq6k2MROIJnViym-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OhmPqcq6k2MROIJnViym-1" target="OhmPqcq6k2MROIJnViym-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-1" value="&lt;h2&gt;User&amp;nbsp;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="130" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=14;" edge="1" parent="1" source="OhmPqcq6k2MROIJnViym-2" target="OhmPqcq6k2MROIJnViym-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-2" value="&lt;h2&gt;User Data&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" edge="1" parent="1" source="OhmPqcq6k2MROIJnViym-3" target="OhmPqcq6k2MROIJnViym-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-3" value="&lt;h2&gt;Website&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="130" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;connect metamask&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="130" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;upload data in website&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="330" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=14;" edge="1" parent="1" source="OhmPqcq6k2MROIJnViym-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="775" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-10" value="&lt;h2&gt;IPFS&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="130" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-12" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;send data to IPFS&lt;/span&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="130" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;" edge="1" parent="1" source="OhmPqcq6k2MROIJnViym-14" target="OhmPqcq6k2MROIJnViym-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-14" value="&lt;h2&gt;Link&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="360" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-15" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;IPFS give the link to &lt;br&gt;access data&amp;nbsp;&lt;/span&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="250" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-16" value="&lt;h2&gt;User Password&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="440" width="110" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-18" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Protocol encrypt the link&amp;nbsp;&lt;br&gt;&lt;/span&gt;and give password to user" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="595" y="485" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OhmPqcq6k2MROIJnViym-19" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;User can access their data from different browser or computer &lt;br&gt;by using not only metamask but also user have to write their password. &lt;br&gt;In this way, security and trust increase&amp;nbsp;&lt;/span&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="520" width="460" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
