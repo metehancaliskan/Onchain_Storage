@@ -58,8 +58,7 @@ export class importAccount extends React.Component<{}, State> {
 
   render(): React.ReactNode {
     return (
-      <>
-        <div>
+        <div style={{width:'100%',backgroundColor:'blue',height:'100vh',display:'flex',alignItems:'center',justifyContent:'center'}}>
           <form onSubmit={this.onSubmit}>
             <label>Token</label>
             <input
@@ -70,7 +69,6 @@ export class importAccount extends React.Component<{}, State> {
             <input type="submit" value="submit" />
           </form>
         </div>
-      </>
     );
   }
 }
